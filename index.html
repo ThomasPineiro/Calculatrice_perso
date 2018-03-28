@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>calculatrice</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <div id="swag">
+    <h1>calculette</h1>
+    <table class="calculatrice" id="calc">
+
+
+        <tr>
+            <td colspan="4" class="calc_td_resultat">
+                <input type="text" readonly="readonly" name="calc_resultat" id="calc_resultat" class="calc_resultat1" value="" onkeydown="javascript:key_detect_calc('calc',event);" />
+            </td>
+        </tr>
+        <tr>
+            <td class="calc_td_btn">
+                <input type="button" id="sept" class="calc_btn" value="7" onclick="camelCase('sept')"/>
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="huit" class="calc_btn" value="8"
+                onclick="camelCase('huit')" />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="neuf" class="calc_btn" value="9"
+                onclick="camelCase('neuf')"  />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="/" class="calc_btn" value="&divide;" onclick="camelCase('/')" />
+            </td>
+        </tr>
+        <tr>
+            <td class="calc_td_btn">
+                <input type="button" id="quatre" class="calc_btn" value="4" onclick="camelCase('quatre')" />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="cinq" class="calc_btn" value="5" onclick="camelCase('cinq')" />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="six" class="calc_btn" value="6" onclick="camelCase('six')" />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="*" class="calc_btn" value="*" onclick="camelCase('*')" />
+            </td>
+        </tr>
+        <tr>
+            <td class="calc_td_btn">
+                <input type="button" id="un" class="calc_btn" value="1" onclick="camelCase('un')" />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="deux" class="calc_btn" value="2" onclick="camelCase('deux')" />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="trois" class="calc_btn" value="3" onclick="camelCase('trois')" />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="-" class="calc_btn" value="-" onclick="camelCase('-')" />
+            </td>
+        </tr>
+        <tr>
+            <td class="calc_td_btn">
+                <input type="button" id="zero" class="calc_btn" value="0" onclick="camelCase('zero')" />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="sept" class="calc_btn" value="&larr;" onclick= />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="clear" class="calc_btn" value="CE" onclick="supprimer()" />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id="addition" class="calc_btn" value="+" onclick="camelCase('addition')" />
+            </td>
+        </tr>
+        <tr>
+            <td class="calc_td_btn">
+                <input type="button" id="(" class="calc_btn" value="(" onclick="camelCase('(')" />
+            </td>
+            <td class="calc_td_btn">
+                <input type="button" id=")" class="calc_btn" value=")" onclick="camelCase(')')" />
+            </td>
+            <!-- J'ai créé un nom de classe spécialement pour le bouton "égal" afin de jouer sur sa largeur de fichier css -->
+            <td class="calc_td_btn">
+                <input type="button" id="=" class="calc_btn_egal" value="=" onclick="resultat()" />
+            </td>
+        </tr>
+    </table>
+    <div id="historique"></div>
+</div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
